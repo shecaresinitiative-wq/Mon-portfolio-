@@ -3,147 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanyonyi Brian | Systems Engineer</title>
+    <title>Wanyonyi Brian | System Architect</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Terminal Navigation -->
+    <!-- Dynamic Navigation -->
     <nav>
-        <div class="logo">~/wanyonyi-brian</div>
+        <div class="logo"><span class="pulse-dot"></span>~/wanyonyi-brian</div>
         <ul class="nav-links">
             <li><a href="#architecture">Architecture</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Initialize</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <header id="hero">
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="terminal-title">bash - wanyonyi@dev</span>
-            </div>
-            <div class="terminal-body">
-                <p><span class="prompt">$</span> whoami</p>
-                <p class="output">Wanyonyi Brian Lukhisi - Systems Engineer & App Architect</p>
+        <div class="hero-container">
+            
+            <!-- Interactive Terminal -->
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="window-controls">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">bash - wanyonyi@dev</span>
+                </div>
                 
-                <p><span class="prompt">$</span> cat skills.json</p>
-                <p class="output highlight">
-                    { <br>
-                    &nbsp;&nbsp;"mobile": "Flutter",<br>
-                    &nbsp;&nbsp;"web": "React",<br>
-                    &nbsp;&nbsp;"backend": "Node.js, Python",<br>
-                    &nbsp;&nbsp;"integrations": ["Safaricom Daraja API (M-Pesa)", "WebSockets"]<br>
-                    }
-                </p>
-                
-                <p><span class="prompt">$</span> run focus.exe</p>
-                <p class="output">"Building KWETU: A Tinder-style matching engine combined with event ticketing and M-Pesa payments."</p>
-                <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">_</span></p>
+                <div class="terminal-body">
+                    <!-- Profile Image integrated into the IDE -->
+                    <div class="ide-profile">
+                        <img src="framed_portrait_16x16_300dpi.png" alt="Wanyonyi Brian" class="profile-pic">
+                        <div class="profile-info">
+                            <h1>Wanyonyi Brian Lukhisi</h1>
+                            <p>Systems Engineer & Architect</p>
+                        </div>
+                    </div>
+
+                    <div class="terminal-text">
+                        <p><span class="prompt">$</span> whoami</p>
+                        <p class="output typewriter" id="typewriter"></p>
+                        
+                        <p><span class="prompt">$</span> cat stack.json</p>
+                        <p class="output highlight">
+                            {<br>
+                            &nbsp;&nbsp;"mobile": "Flutter",<br>
+                            &nbsp;&nbsp;"web": "React",<br>
+                            &nbsp;&nbsp;"backend": "Node.js, Python",<br>
+                            &nbsp;&nbsp;"payments": "Daraja API (M-Pesa)"<br>
+                            }
+                        </p>
+                        <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">_</span></p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </header>
 
-    <!-- Architecture Section (The Real Flex) -->
+    <!-- The Portal (Architecture Section) -->
     <section id="architecture" class="section">
-        <h2 class="section-title">System Architecture: <span class="highlight-text">KWETU</span></h2>
-        <p class="section-subtitle">A micro-economy super app combining social discovery, event booking, and ticketing.</p>
+        <div class="section-header">
+            <h2>Select a <span class="highlight-text">System</span></h2>
+            <p>Tap a node to enter the live environment.</p>
+        </div>
         
-        <div class="architecture-grid">
-            <!-- Node 1 -->
-            <div class="arch-node">
-                <i class="fas fa-fire"></i>
-                <h3>Matching Engine</h3>
-                <p>Tinder-style algorithm connecting clients to businesses based on geolocation and preferences.</p>
-            </div>
+        <div class="portal-grid">
             
-            <!-- Node 2 -->
-            <div class="arch-node center-node">
-                <i class="fas fa-cubes"></i>
-                <h3>KWETU Core</h3>
-                <p>The central React & Node.js API orchestrating the ecosystem.</p>
-            </div>
-
-            <!-- Node 3 -->
-            <div class="arch-node">
-                <i class="fas fa-ticket-alt"></i>
-                <h3>Ticketing & Events</h3>
-                <p>Real-time event booking system with QR code generation.</p>
-            </div>
-
-            <!-- Node 4 -->
-            <div class="arch-node">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Daraja API</h3>
-                <p>Native M-Pesa STK Push and C2B integration for seamless payments.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Other Deployments</h2>
-        <div class="projects-list">
-            
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>Deevah App</h3>
-                    <span class="tag">Flutter</span>
-                    <span class="tag">M-Pesa</span>
+            <!-- KWETU Portal -->
+            <a href="#" class="portal-card" target="_blank">
+                <div class="card-bg"></div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>KWETU</h3>
+                    <p class="card-desc">Social commerce super-app. Tinder-style matching + ticketing + Daraja payments.</p>
+                    <div class="card-tags">
+                        <span>React</span><span>Node.js</span><span>Daraja</span>
+                    </div>
+                    <div class="card-action">Launch System <i class="fas fa-arrow-right"></i></div>
                 </div>
-                <p>An "Uber for Beauty" connecting salons and stylists to clients. Handled real-time availability syncing and M-Pesa deposit payments.</p>
-            </div>
+            </a>
 
-            <div class="project-item">
-                <div class="project-header">
+            <!-- Deeva Portal -->
+            <a href="#" class="portal-card" target="_blank">
+                <div class="card-bg"></div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Deevah</h3>
+                    <p class="card-desc">Uber for Beauty. Real-time salon matching and M-Pesa deposits.</p>
+                    <div class="card-tags">
+                        <span>Flutter</span><span>Firebase</span>
+                    </div>
+                    <div class="card-action">Launch System <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <!-- Quick Doctor Portal -->
+            <a href="#" class="portal-card" target="_blank">
+                <div class="card-bg"></div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-stethoscope"></i></div>
                     <h3>Quick Doctor</h3>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
+                    <p class="card-desc">Patient-doctor portal. Secure chat, appointments, and records.</p>
+                    <div class="card-tags">
+                        <span>React</span><span>Node.js</span>
+                    </div>
+                    <div class="card-action">Launch System <i class="fas fa-arrow-right"></i></div>
                 </div>
-                <p>A patient-doctor portal allowing personal doctor assignments, appointment booking, and secure chat consultations.</p>
-            </div>
+            </a>
 
-        </div>
-    </section>
-
-    <!-- Code Snippet (The Daraja Flex) -->
-    <section id="code" class="section">
-        <h2 class="section-title">Daraja Integration Snippet</h2>
-        <div class="code-window">
-            <div class="code-header">
-                <span>mpesa_controller.js</span>
-            </div>
-            <pre><code><span class="keyword">const</span> axios = <span class="function">require</span>(<span class="string">'axios'</span>);
-
-<span class="comment">// Initiating STK Push for KWETU ticket purchase</span>
-<span class="keyword">async function</span> <span class="function">initiateStkPush</span>(phoneNumber, amount, accountRef) {
-    <span class="keyword">const</span> token = <span class="keyword">await</span> <span class="function">getMpesaToken</span>();
-    
-    <span class="keyword">const</span> response = <span class="keyword">await</span> axios.<span class="function">post</span>(
-        <span class="string">'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'</span>,
-        {
-            BusinessShortCode: process.env.SHORTCODE,
-            Password: <span class="function">generatePassword</span>(),
-            TransactionType: <span class="string">"CustomerPayBillOnline"</span>,
-            Amount: amount,
-            PartyA: phoneNumber,
-            PartyB: process.env.SHORTCODE,
-            PhoneNumber: phoneNumber,
-            CallBackURL: <span class="string">"https://api.kwetu.com/mpesa/callback"</span>,
-            AccountReference: accountRef,
-            TransactionDesc: <span class="string">"KWETU Ticket Payment"</span>
-        },
-        { headers: { Authorization: <span class="string">`Bearer ${token}`</span> } }
-    );
-    <span class="keyword">return</span> response.data;
-}</code></pre>
         </div>
     </section>
 
@@ -151,19 +123,17 @@
     <section id="contact" class="section">
         <div class="contact-box">
             <h2>Initialize Connection</h2>
-            <p>Currently available for architecture consulting and full-stack development.</p>
             <div class="contact-links">
-                <a href="mailto:robinbrian392@gmail.com" class="btn btn-primary">Email Me</a>
-                <a href="https://www.linkedin.com/in/Wanyonyi Brian Lukhisi" target="_blank" class="btn">LinkedIn</a>
-                <a href="https://github.com/shecaresinitiative-wq" target="_blank" class="btn">GitHub</a>
+                <a href="mailto:robinbrian392@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/shecaresinitiative-wq" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>System.out.println("© 2024 Wanyonyi Brian. Built from scratch.");</p>
+        <p>System.out.println("© 2024 Wanyonyi Brian.");</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-                    </html>
+    </html>
