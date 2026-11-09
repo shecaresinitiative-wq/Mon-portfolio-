@@ -1,300 +1,169 @@
-:root {
-    --bg-main: #0d1117; /* GitHub Dark Mode */
-    --bg-secondary: #161b22;
-    --text-main: #c9d1d9;
-    --text-muted: #8b949e;
-    --accent: #58a6ff; /* Neon Blue */
-    --accent-green: #238636; /* Code Green */
-    --border: #30363d;
-    --font-mono: 'JetBrains Mono', monospace;
-    --font-sans: 'Inter', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanyonyi Brian | Systems Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!-- Terminal Navigation -->
+    <nav>
+        <div class="logo">~/wanyonyi-brian</div>
+        <ul class="nav-links">
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-body {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    font-family: var(--font-sans);
-    line-height: 1.6;
-}
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">bash - wanyonyi@dev</span>
+            </div>
+            <div class="terminal-body">
+                <p><span class="prompt">$</span> whoami</p>
+                <p class="output">Wanyonyi Brian Lukhisi - Systems Engineer & App Architect</p>
+                
+                <p><span class="prompt">$</span> cat skills.json</p>
+                <p class="output highlight">
+                    { <br>
+                    &nbsp;&nbsp;"mobile": "Flutter",<br>
+                    &nbsp;&nbsp;"web": "React",<br>
+                    &nbsp;&nbsp;"backend": "Node.js, Python",<br>
+                    &nbsp;&nbsp;"integrations": ["Safaricom Daraja API (M-Pesa)", "WebSockets"]<br>
+                    }
+                </p>
+                
+                <p><span class="prompt">$</span> run focus.exe</p>
+                <p class="output">"Building KWETU: A Tinder-style matching engine combined with event ticketing and M-Pesa payments."</p>
+                <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">_</span></p>
+            </div>
+        </div>
+    </header>
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 5%;
-    border-bottom: 1px solid var(--border);
-    font-family: var(--font-mono);
-}
+    <!-- Architecture Section (The Real Flex) -->
+    <section id="architecture" class="section">
+        <h2 class="section-title">System Architecture: <span class="highlight-text">KWETU</span></h2>
+        <p class="section-subtitle">A micro-economy super app combining social discovery, event booking, and ticketing.</p>
+        
+        <div class="architecture-grid">
+            <!-- Node 1 -->
+            <div class="arch-node">
+                <i class="fas fa-fire"></i>
+                <h3>Matching Engine</h3>
+                <p>Tinder-style algorithm connecting clients to businesses based on geolocation and preferences.</p>
+            </div>
+            
+            <!-- Node 2 -->
+            <div class="arch-node center-node">
+                <i class="fas fa-cubes"></i>
+                <h3>KWETU Core</h3>
+                <p>The central React & Node.js API orchestrating the ecosystem.</p>
+            </div>
 
-.logo {
-    color: var(--accent);
-    font-weight: 700;
-}
+            <!-- Node 3 -->
+            <div class="arch-node">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>Ticketing & Events</h3>
+                <p>Real-time event booking system with QR code generation.</p>
+            </div>
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+            <!-- Node 4 -->
+            <div class="arch-node">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Daraja API</h3>
+                <p>Native M-Pesa STK Push and C2B integration for seamless payments.</p>
+            </div>
+        </div>
+    </section>
 
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-}
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Other Deployments</h2>
+        <div class="projects-list">
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Deevah App</h3>
+                    <span class="tag">Flutter</span>
+                    <span class="tag">M-Pesa</span>
+                </div>
+                <p>An "Uber for Beauty" connecting salons and stylists to clients. Handled real-time availability syncing and M-Pesa deposit payments.</p>
+            </div>
 
-.nav-links a:hover {
-    color: var(--accent);
-}
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Quick Doctor</h3>
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                </div>
+                <p>A patient-doctor portal allowing personal doctor assignments, appointment booking, and secure chat consultations.</p>
+            </div>
 
-/* Terminal Hero */
-#hero {
-    padding: 6rem 5%;
-    display: flex;
-    justify-content: center;
-}
+        </div>
+    </section>
 
-.terminal-window {
-    width: 100%;
-    max-width: 800px;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    font-family: var(--font-mono);
-}
+    <!-- Code Snippet (The Daraja Flex) -->
+    <section id="code" class="section">
+        <h2 class="section-title">Daraja Integration Snippet</h2>
+        <div class="code-window">
+            <div class="code-header">
+                <span>mpesa_controller.js</span>
+            </div>
+            <pre><code><span class="keyword">const</span> axios = <span class="function">require</span>(<span class="string">'axios'</span>);
 
-.terminal-header {
-    background: #21262d;
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+<span class="comment">// Initiating STK Push for KWETU ticket purchase</span>
+<span class="keyword">async function</span> <span class="function">initiateStkPush</span>(phoneNumber, amount, accountRef) {
+    <span class="keyword">const</span> token = <span class="keyword">await</span> <span class="function">getMpesaToken</span>();
+    
+    <span class="keyword">const</span> response = <span class="keyword">await</span> axios.<span class="function">post</span>(
+        <span class="string">'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'</span>,
+        {
+            BusinessShortCode: process.env.SHORTCODE,
+            Password: <span class="function">generatePassword</span>(),
+            TransactionType: <span class="string">"CustomerPayBillOnline"</span>,
+            Amount: amount,
+            PartyA: phoneNumber,
+            PartyB: process.env.SHORTCODE,
+            PhoneNumber: phoneNumber,
+            CallBackURL: <span class="string">"https://api.kwetu.com/mpesa/callback"</span>,
+            AccountReference: accountRef,
+            TransactionDesc: <span class="string">"KWETU Ticket Payment"</span>
+        },
+        { headers: { Authorization: <span class="string">`Bearer ${token}`</span> } }
+    );
+    <span class="keyword">return</span> response.data;
+}</code></pre>
+        </div>
+    </section>
 
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="contact-box">
+            <h2>Initialize Connection</h2>
+            <p>Currently available for architecture consulting and full-stack development.</p>
+            <div class="contact-links">
+                <a href="mailto:robinbrian392@gmail.com" class="btn btn-primary">Email Me</a>
+                <a href="https://www.linkedin.com/in/Wanyonyi Brian Lukhisi" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://github.com/shecaresinitiative-wq" target="_blank" class="btn">GitHub</a>
+            </div>
+        </div>
+    </section>
 
-.terminal-title {
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    margin-left: 10px;
-}
+    <footer>
+        <p>System.out.println("© 2024 Wanyonyi Brian. Built from scratch.");</p>
+    </footer>
 
-.terminal-body {
-    padding: 20px;
-    font-size: 0.95rem;
-}
-
-.prompt { color: var(--accent-green); font-weight: bold; }
-.output { margin-bottom: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); }
-.highlight { color: #79c0ff; }
-.cursor { animation: blink 1s step-end infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-
-/* Sections */
-.section {
-    padding: 5rem 5%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-family: var(--font-mono);
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-main);
-}
-
-.highlight-text {
-    color: var(--accent);
-}
-
-.section-subtitle {
-    color: var(--text-muted);
-    margin-bottom: 3rem;
-}
-
-/* Architecture Grid */
-.architecture-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.arch-node {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    padding: 1.5rem;
-    border-radius: 8px;
-    transition: border-color 0.3s;
-}
-
-.arch-node:hover {
-    border-color: var(--accent);
-}
-
-.center-node {
-    border-color: var(--accent-green);
-    background: rgba(35, 134, 54, 0.1);
-}
-
-.arch-node i {
-    font-size: 1.5rem;
-    color: var(--accent);
-    margin-bottom: 1rem;
-}
-
-.arch-node h3 {
-    font-family: var(--font-mono);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.arch-node p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-/* Projects List */
-.projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.project-item {
-    border-left: 2px solid var(--accent-green);
-    padding-left: 1.5rem;
-}
-
-.project-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-header h3 {
-    font-family: var(--font-mono);
-}
-
-.tag {
-    background: var(--border);
-    color: var(--text-main);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-family: var(--font-mono);
-}
-
-.project-item p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-/* Code Window */
-.code-window {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-}
-
-.code-header {
-    background: #21262d;
-    padding: 10px 15px;
-    color: var(--text-muted);
-    border-bottom: 1px solid var(--border);
-}
-
-pre {
-    padding: 20px;
-    overflow-x: auto;
-    color: var(--text-main);
-}
-
-.keyword { color: #ff7b72; }
-.function { color: #d2a8ff; }
-.string { color: #a5d6ff; }
-.comment { color: #8b949e; font-style: italic; }
-
-/* Contact */
-#contact {
-    text-align: center;
-    font-family: var(--font-mono);
-}
-
-.contact-box h2 {
-    margin-bottom: 1rem;
-}
-
-.contact-box p {
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 0.8rem 1.5rem;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--text-main);
-    text-decoration: none;
-    transition: all 0.2s;
-}
-
-.btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-.btn-primary {
-    background: var(--accent-green);
-    border-color: var(--accent-green);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #2ea043;
-    color: white;
-}
-
-footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-}
-
-@media (max-width: 768px) {
-    .hero-content, .project-card {
-        flex-direction: column;
-    }
-    .terminal-body pre {
-        font-size: 0.8rem;
-    }
-}
+    <script src="script.js"></script>
+</body>
+                    </html>
