@@ -1,164 +1,300 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanyonyi Brian Lukhisi | Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+:root {
+    --bg-main: #0d1117; /* GitHub Dark Mode */
+    --bg-secondary: #161b22;
+    --text-main: #c9d1d9;
+    --text-muted: #8b949e;
+    --accent: #58a6ff; /* Neon Blue */
+    --accent-green: #238636; /* Code Green */
+    --border: #30363d;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', sans-serif;
+}
 
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="logo">Wanyonyi<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Hero Section -->
-    <header id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="greeting">Hello, I am</p>
-                <h1>Wanyonyi Brian <br><span class="gradient-text">Lukhisi</span></h1>
-                <h2>Software Engineer & Product Builder</h2>
-                <p class="hero-description">
-                    Turning complex problems into elegant, scalable digital experiences. Started coding in 2022, already building the future of tech.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Book a Call</a>
-                </div>
-            </div>
-            <!-- Replace 'your-photo.jpg' with your actual image file name -->
-            <div class="hero-image">
-                <div class="image-glow"></div>
-                <img src="framed_portrait_16x16_300dpi.png" alt="Wanyonyi Brian Lukhisi">
-            </div>
-        </div>
-    </header>
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title">The Journey</h2>
-        <div class="about-grid">
-            <div class="about-text glass-card">
-                <p>I started my coding journey in 2022 with a simple goal: to build things that matter. I don't just write code; I architect solutions to real-world problems.</p>
-                <p>From connecting people to beauty services, to revolutionizing healthcare access, to building business ecosystems—I’ve spent the last two years mastering the full-stack to bring ideas to life. I am a fast learner, a versatile developer, and a relentless builder.</p>
-                <div class="skills-tags">
-                    <span>Full-Stack Dev</span>
-                    <span>UI/UX Design</span>
-                    <span>App Architecture</span>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono);
+}
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
-        <div class="projects-grid">
+.logo {
+    color: var(--accent);
+    font-weight: 700;
+}
 
-            <!-- Project 1: KWETU -->
-            <div class="project-card glass-card">
-                <div class="project-info">
-                    <span class="status building">🟢 Currently Building</span>
-                    <h3>KWETU</h3>
-                    <p class="problem">The Problem: Local businesses struggle to find clients, and clients struggle to find reliable local businesses.</p>
-                    <p>The Solution: A social-commerce app bridging the gap between clients and businesses.</p>
-                    
-                    <!-- 🚨 UPLOAD YOUR LINK HERE 🚨 -->
-                    <a href="#" class="project-link" target="_blank" title="Add your live link here">View Live Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="project-mockup">
-                    <div class="phone-mockup">
-                        <div class="screen">
-                            <div class="app-header">KWETU</div>
-                            <div class="app-content">
-                                <div class="mock-card"></div>
-                                <div class="mock-card"></div>
-                                <div class="mock-card"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-            <!-- Project 2: Deeva -->
-            <div class="project-card glass-card reverse">
-                <div class="project-info">
-                    <span class="status prototype">🟡 Prototype</span>
-                    <h3>Deevah</h3>
-                    <p class="problem">The Problem: Booking beauty and salon services is fragmented and time-consuming.</p>
-                    <p>The Solution: An "Uber for Beauty" that connects salons and stylists to clients seamlessly.</p>
-                    
-                    <!-- 🚨 UPLOAD YOUR LINK HERE 🚨 -->
-                    <a href="#" class="project-link" target="_blank" title="Add your live link here">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="project-mockup">
-                    <div class="phone-mockup">
-                        <div class="screen">
-                            <div class="app-header">Deevah</div>
-                            <div class="app-content">
-                                <div class="mock-card round"></div>
-                                <div class="mock-card"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
 
-            <!-- Project 3: Quick Doctor -->
-            <div class="project-card glass-card">
-                <div class="project-info">
-                    <span class="status prototype">🟡 Prototype</span>
-                    <h3>Quick Doctor</h3>
-                    <p class="problem">The Problem: Patients lack immediate access to personal doctors for quick questions and appointments.</p>
-                    <p>The Solution: A hospital platform giving every patient a personal, on-demand doctor.</p>
-                    
-                    <!-- 🚨 UPLOAD YOUR LINK HERE 🚨 -->
-                    <a href="#" class="project-link" target="_blank" title="Add your live link here">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="project-mockup">
-                    <div class="phone-mockup">
-                        <div class="screen">
-                            <div class="app-header">Quick Doc</div>
-                            <div class="app-content">
-                                <div class="mock-card cross"></div>
-                                <div class="mock-card"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+.nav-links a:hover {
+    color: var(--accent);
+}
 
-        </div>
-    </section>
+/* Terminal Hero */
+#hero {
+    padding: 6rem 5%;
+    display: flex;
+    justify-content: center;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="contact-box glass-card">
-            <h2>Let's build something great.</h2>
-            <p>I am currently available for freelance work and full-time opportunities.</p>
-            <div class="contact-links">
-                <a href="mailto:robinbrian392@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
-                <a href="https://www.linkedin.com/in/Wanyonyi Brian Lukhisi" target="_blank" class="btn btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/shecaresinitiative-wq" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-            <p class="phone"><i class="fas fa-phone"></i> 0714619339</p>
-        </div>
-    </section>
+.terminal-window {
+    width: 100%;
+    max-width: 800px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    font-family: var(--font-mono);
+}
 
-    <footer>
-        <p>&copy; 2023 Wanyonyi Brian Lukhisi. All rights reserved.</p>
-    </footer>
+.terminal-header {
+    background: #21262d;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.terminal-body {
+    padding: 20px;
+    font-size: 0.95rem;
+}
+
+.prompt { color: var(--accent-green); font-weight: bold; }
+.output { margin-bottom: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); }
+.highlight { color: #79c0ff; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Sections */
+.section {
+    padding: 5rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.highlight-text {
+    color: var(--accent);
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+/* Architecture Grid */
+.architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.arch-node {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.arch-node:hover {
+    border-color: var(--accent);
+}
+
+.center-node {
+    border-color: var(--accent-green);
+    background: rgba(35, 134, 54, 0.1);
+}
+
+.arch-node i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.arch-node h3 {
+    font-family: var(--font-mono);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.arch-node p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Projects List */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-item {
+    border-left: 2px solid var(--accent-green);
+    padding-left: 1.5rem;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-header h3 {
+    font-family: var(--font-mono);
+}
+
+.tag {
+    background: var(--border);
+    color: var(--text-main);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+}
+
+.project-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Code Window */
+.code-window {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+}
+
+.code-header {
+    background: #21262d;
+    padding: 10px 15px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+}
+
+pre {
+    padding: 20px;
+    overflow-x: auto;
+    color: var(--text-main);
+}
+
+.keyword { color: #ff7b72; }
+.function { color: #d2a8ff; }
+.string { color: #a5d6ff; }
+.comment { color: #8b949e; font-style: italic; }
+
+/* Contact */
+#contact {
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.contact-box h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-box p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-primary {
+    background: var(--accent-green);
+    border-color: var(--accent-green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2ea043;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content, .project-card {
+        flex-direction: column;
+    }
+    .terminal-body pre {
+        font-size: 0.8rem;
+    }
+}
