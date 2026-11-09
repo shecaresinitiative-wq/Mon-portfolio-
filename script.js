@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,26 +8,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Simple fade-in animation on scroll
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
+// Dynamic Typewriter Effect for the Terminal
+const textToType = "Architecting scalable systems. From Tinder-style matching to M-Pesa Daraja integrations. I build the engine, not just the UI.";
+const typewriterElement = document.getElementById('typewriter');
+let index = 0;
+
+function typeText() {
+    if (index < textToType.length) {
+        typewriterElement.textContent += textToType.charAt(index);
+        index++;
+        setTimeout(typeText, 40); // Speed of typing (lower is faster)
+    }
+}
+
+// Start typing when the page loads
+window.onload = () => {
+    setTimeout(typeText, 500); // Slight delay before typing starts
 };
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = 'translateY(50px)';
-    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(section);
-});
