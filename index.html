@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanyonyi Brian | System Architect</title>
+    <title>Wanyonyi Brian | Founder & Lead Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Dynamic Navigation -->
+    <!-- Navigation -->
     <nav>
         <div class="logo"><span class="pulse-dot"></span>~/wanyonyi-brian</div>
         <ul class="nav-links">
-            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#ecosystem">Ecosystem</a></li>
             <li><a href="#contact">Initialize</a></li>
         </ul>
     </nav>
@@ -22,8 +22,6 @@
     <!-- Hero Section -->
     <header id="hero">
         <div class="hero-container">
-            
-            <!-- Interactive Terminal -->
             <div class="terminal-window">
                 <div class="terminal-header">
                     <div class="window-controls">
@@ -35,12 +33,11 @@
                 </div>
                 
                 <div class="terminal-body">
-                    <!-- Profile Image integrated into the IDE -->
                     <div class="ide-profile">
                         <img src="framed_portrait_16x16_300dpi.png" alt="Wanyonyi Brian" class="profile-pic">
                         <div class="profile-info">
                             <h1>Wanyonyi Brian Lukhisi</h1>
-                            <p>Systems Engineer & Architect</p>
+                            <p>Founder & Lead Systems Engineer</p>
                         </div>
                     </div>
 
@@ -48,74 +45,86 @@
                         <p><span class="prompt">$</span> whoami</p>
                         <p class="output typewriter" id="typewriter"></p>
                         
-                        <p><span class="prompt">$</span> cat stack.json</p>
+                        <p><span class="prompt">$</span> cat ecosystem.json</p>
                         <p class="output highlight">
                             {<br>
-                            &nbsp;&nbsp;"mobile": "Flutter",<br>
-                            &nbsp;&nbsp;"web": "React",<br>
-                            &nbsp;&nbsp;"backend": "Node.js, Python",<br>
-                            &nbsp;&nbsp;"payments": "Daraja API (M-Pesa)"<br>
+                            &nbsp;&nbsp;"agency": "Aztech Intelligence",<br>
+                            &nbsp;&nbsp;"flagship": "KWETU Super-App",<br>
+                            &nbsp;&nbsp;"utility": "Mambo Ya Hosii (Jobs)",<br>
+                            &nbsp;&nbsp;"integrations": ["Safaricom Daraja API", "M-Pesa"]<br>
                             }
                         </p>
                         <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">_</span></p>
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
 
-    <!-- The Portal (Architecture Section) -->
-    <section id="architecture" class="section">
+    <!-- The Ecosystem (Tabs) -->
+    <section id="ecosystem" class="section">
         <div class="section-header">
-            <h2>Select a <span class="highlight-text">System</span></h2>
-            <p>Tap a node to enter the live environment.</p>
+            <h2>Explore the <span class="highlight-text">Ecosystem</span></h2>
+            <p>Tap a system to enter the live environment.</p>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div class="tab-container">
+            <button class="tab-btn active" data-target="agency">The Agency</button>
+            <button class="tab-btn" data-target="products">The Products</button>
         </div>
         
-        <div class="portal-grid">
-            
-            <!-- KWETU Portal -->
-            <a href="#" class="portal-card" target="_blank">
-                <div class="card-bg"></div>
-                <div class="card-content">
-                    <div class="card-icon"><i class="fas fa-cubes"></i></div>
-                    <h3>KWETU</h3>
-                    <p class="card-desc">Social commerce super-app. Tinder-style matching + ticketing + Daraja payments.</p>
-                    <div class="card-tags">
-                        <span>React</span><span>Node.js</span><span>Daraja</span>
+        <!-- AGENCY TAB -->
+        <div class="tab-content active" id="agency">
+            <div class="portal-grid">
+                <a href="https://aztech-inteligence.vercel.app/" class="portal-card" target="_blank">
+                    <div class="card-bg"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Aztech Intelligence</h3>
+                        <p class="card-desc">Full-service digital agency. Web development, AI integrations, and performance marketing.</p>
+                        <div class="card-tags">
+                            <span>Agency</span><span>SEO</span><span>AI</span>
+                        </div>
+                        <div class="card-action">Visit Agency <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="card-action">Launch System <i class="fas fa-arrow-right"></i></div>
-                </div>
-            </a>
+                </a>
+            </div>
+        </div>
 
-            <!-- Deeva Portal -->
-            <a href="#" class="portal-card" target="_blank">
-                <div class="card-bg"></div>
-                <div class="card-content">
-                    <div class="card-icon"><i class="fas fa-cut"></i></div>
-                    <h3>Deevah</h3>
-                    <p class="card-desc">Uber for Beauty. Real-time salon matching and M-Pesa deposits.</p>
-                    <div class="card-tags">
-                        <span>Flutter</span><span>Firebase</span>
+        <!-- PRODUCTS TAB -->
+        <div class="tab-content" id="products">
+            <div class="portal-grid">
+                
+                <!-- KWETU -->
+                <a href="https://kwetu-v3m3.onrender.com" class="portal-card" target="_blank">
+                    <div class="card-bg"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-city"></i></div>
+                        <h3>KWETU</h3>
+                        <p class="card-desc">A local super-app. Discover events, book wellness, request rides, and sell tickets with QR codes.</p>
+                        <div class="card-tags">
+                            <span>React</span><span>Node.js</span><span>Daraja</span>
+                        </div>
+                        <div class="card-action">Launch App <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="card-action">Launch System <i class="fas fa-arrow-right"></i></div>
-                </div>
-            </a>
+                </a>
 
-            <!-- Quick Doctor Portal -->
-            <a href="#" class="portal-card" target="_blank">
-                <div class="card-bg"></div>
-                <div class="card-content">
-                    <div class="card-icon"><i class="fas fa-stethoscope"></i></div>
-                    <h3>Quick Doctor</h3>
-                    <p class="card-desc">Patient-doctor portal. Secure chat, appointments, and records.</p>
-                    <div class="card-tags">
-                        <span>React</span><span>Node.js</span>
+                <!-- Mambo Ya Hosii -->
+                <a href="https://mambo-ya-hosii.onrender.com" class="portal-card" target="_blank">
+                    <div class="card-bg"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-hospital"></i></div>
+                        <h3>Mambo Ya Hosii</h3>
+                        <p class="card-desc">A dedicated hospital jobs application portal. Streamlining employment in the medical sector.</p>
+                        <div class="card-tags">
+                            <span>Web App</span><span>Utility</span>
+                        </div>
+                        <div class="card-action">Launch Portal <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="card-action">Launch System <i class="fas fa-arrow-right"></i></div>
-                </div>
-            </a>
+                </a>
 
+            </div>
         </div>
     </section>
 
@@ -123,6 +132,7 @@
     <section id="contact" class="section">
         <div class="contact-box">
             <h2>Initialize Connection</h2>
+            <p>Available for high-level system architecture and full-stack development.</p>
             <div class="contact-links">
                 <a href="mailto:robinbrian392@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email</a>
                 <a href="https://github.com/shecaresinitiative-wq" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
@@ -136,4 +146,4 @@
 
     <script src="script.js"></script>
 </body>
-    </html>
+</html>
