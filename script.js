@@ -4,18 +4,15 @@ const tabContents = document.querySelectorAll('.tab-content');
 
 tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        // Remove active class from all buttons and contents
         tabBtns.forEach(b => b.classList.remove('active'));
         tabContents.forEach(c => c.classList.remove('active'));
-        
-        // Add active class to clicked button and target content
         btn.classList.add('active');
         document.getElementById(btn.dataset.target).classList.add('active');
     });
 });
 
 // --- TYPEWRITER EFFECT ---
-const textToType = "Building digital ecosystems that solve real-world problems. From agency-grade web platforms to complex super-apps with native M-Pesa integrations.";
+const textToType = "Architecting enterprise-grade systems for global clients. From AI agents to native M-Pesa Daraja integrations, I build the engines that scale businesses.";
 const typewriterElement = document.getElementById('typewriter');
 let index = 0;
 
