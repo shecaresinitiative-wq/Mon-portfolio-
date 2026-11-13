@@ -1,180 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanyonyi Brian | Founder & Principal Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brian Wanyonyi | Software Engineer, Web, Mobile, AI and M-Pesa Payments</title>
+<meta name="description" content="Brian Wanyonyi builds web and mobile software, AI assistants and M-Pesa payment integrations for businesses in Kenya and worldwide.">
+<script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo"><span class="pulse-dot"></span>~/wanyonyi-brian</div>
-        <ul class="nav-links">
-            <li><a href="#services">Arsenal</a></li>
-            <li><a href="#ecosystem">Ecosystem</a></li>
-            <li><a href="#contact">Initialize</a></li>
-        </ul>
-    </nav>
+<header class="site-header">
+  <a class="brand" href="#top">Brian Wanyonyi</a>
+  <nav aria-label="Main">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <button class="theme-toggle" type="button" id="theme-toggle">Dark mode</button>
+    <a class="nav-cta" href="#contact">Start a project</a>
+  </nav>
+</header>
 
-    <!-- Hero Section -->
-    <header id="hero">
-        <div class="hero-container">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="window-controls">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <span class="terminal-title">bash - wanyonyi@dev</span>
-                </div>
-                
-                <div class="terminal-body">
-                    <div class="ide-profile">
-                        <img src="framed_portrait_16x16_300dpi.png" alt="Wanyonyi Brian" class="profile-pic">
-                        <div class="profile-info">
-                            <h1>Wanyonyi Brian Lukhisi</h1>
-                            <p>Founder @ Aztech Intelligence | Principal Engineer</p>
-                        </div>
-                    </div>
+<main id="top">
 
-                    <div class="terminal-text">
-                        <p><span class="prompt">$</span> whoami</p>
-                        <p class="output typewriter" id="typewriter"></p>
-                        
-                        <p><span class="prompt">$</span> cat global_reach.json</p>
-                        <p class="output highlight">
-                            {<br>
-                            &nbsp;&nbsp;"architecture": "Scalable Web & Mobile Apps",<br>
-                            &nbsp;&nbsp;"specialties": ["AI Agents", "Fintech Integrations (Daraja)", "High-Conversion UI"],<br>
-                            &nbsp;&nbsp;"target_markets": ["Kenya", "United States", "Global"],<br>
-                            &nbsp;&nbsp;"status": "Accepting high-impact projects"<br>
-                            }
-                        </p>
-                        <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">_</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- The Arsenal (Services) -->
-    <section id="services" class="section">
-        <div class="section-header">
-            <h2>The <span class="highlight-text">Arsenal</span></h2>
-            <p>Enterprise-grade capabilities, deployed by a single accountable architect.</p>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-code"></i>
-                <h3>Full-Stack Engineering</h3>
-                <p>React, Node.js, and Flutter. From responsive frontends to heavy-lifting backend APIs and database architecture.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-robot"></i>
-                <h3>AI & Automation</h3>
-                <p>Custom AI agents, LLM integrations, and intelligent chatbots designed to automate workflows and generate leads.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Fintech & Daraja API</h3>
-                <p>Native M-Pesa integrations (STK Push, C2B). Secure, real-time payment gateways for complex applications.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Growth & Analytics</h3>
-                <p>SEO-optimized builds, Meta/Google Ad integration, and data-driven dashboards that track real business ROI.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Ecosystem (Products & Agency) -->
-    <section id="ecosystem" class="section">
-        <div class="section-header">
-            <h2>Explore the <span class="highlight-text">Ecosystem</span></h2>
-            <p>Enter the live environments. Built from the ground up.</p>
-        </div>
-
-        <div class="tab-container">
-            <button class="tab-btn active" data-target="agency">The Agency</button>
-            <button class="tab-btn" data-target="products">The Products</button>
-        </div>
-        
-        <!-- AGENCY TAB -->
-        <div class="tab-content active" id="agency">
-            <div class="portal-grid">
-                <a href="https://aztech-inteligence.vercel.app/" class="portal-card" target="_blank">
-                    <div class="card-bg"></div>
-                    <div class="card-content">
-                        <div class="card-icon"><i class="fas fa-globe"></i></div>
-                        <h3>Aztech Intelligence</h3>
-                        <p class="card-desc">The parent digital agency. Specializing in global web development, AI solutions, and performance marketing.</p>
-                        <div class="card-tags">
-                            <span>Agency</span><span>Global</span><span>Enterprise</span>
-                        </div>
-                        <div class="card-action">Visit Live Agency <i class="fas fa-arrow-right"></i></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- PRODUCTS TAB -->
-        <div class="tab-content" id="products">
-            <div class="portal-grid">
-                
-                <!-- KWETU -->
-                <a href="https://kwetu-v3m3.onrender.com" class="portal-card" target="_blank">
-                    <div class="card-bg"></div>
-                    <div class="card-content">
-                        <div class="card-icon"><i class="fas fa-city"></i></div>
-                        <h3>KWETU</h3>
-                        <p class="card-desc">A local super-app. A multi-service ecosystem for discovery, ticketing, and service booking.</p>
-                        <div class="card-tags">
-                            <span>React</span><span>Super-App</span><span>Daraja</span>
-                        </div>
-                        <div class="card-action">Launch Environment <i class="fas fa-arrow-right"></i></div>
-                    </div>
-                </a>
-
-                <!-- Mambo Ya Hosii -->
-                <a href="https://mambo-ya-hosii.onrender.com" class="portal-card" target="_blank">
-                    <div class="card-bg"></div>
-                    <div class="card-content">
-                        <div class="card-icon"><i class="fas fa-hospital"></i></div>
-                        <h3>Mambo Ya Hosii</h3>
-                        <p class="card-desc">Medical employment portal. Streamlining job discovery and application for healthcare professionals.</p>
-                        <div class="card-tags">
-                            <span>Web App</span><span>Utility</span><span>Community</span>
-                        </div>
-                        <div class="card-action">Launch Portal <i class="fas fa-arrow-right"></i></div>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <div class="contact-box">
-            <h2>Initialize Connection</h2>
-            <p>Ready to deploy enterprise solutions? Let's discuss your architecture.</p>
-            <div class="contact-links">
-                <a href="mailto:robinbrian392@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Direct Email</a>
-                <a href="https://github.com/shecaresinitiative-wq" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>System.out.println("© 2024 Wanyonyi Brian. Architecting the future.");</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Software that runs your business and gets you paid.</h1>
+    <p class="lead">I design and build web apps, mobile apps and AI assistants for businesses in Kenya and abroad, including M-Pesa payments that work the first time.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#contact">Start a project</a>
